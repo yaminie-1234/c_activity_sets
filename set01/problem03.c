@@ -20,7 +20,7 @@ int add(int a, int b){
 }
 
 void output(int a, int b, int sum){
-    printf("The sum of %d and %d : %d\n ",sum); //when using format specifiers, always use the same number of variables
+    printf("The sum of %d and %d : %d\n ",a,b,sum); //when using format specifiers, always use the same number of variables
 }
 int main(){
     int a,b,sum;
