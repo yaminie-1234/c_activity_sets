@@ -1,43 +1,45 @@
-// 9. Write a C program to find the [square root](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) of a number.
-
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 float input();
-float square_root(float n); 
+float square_root(float n);
 void output(float n, float sqrroot);
 
-int main() {
-    float number, result;
-
+int main()
+{
+    float n, sqrrt;
+    n=input();
+    sqrrt=square_root(n);
+    output(n,sqrrt);
     
-    number = input();
-
-    result = square_root(number);
-
-
-    output(number, result);
-
-    return 0;
 }
 
-float input() {
-    float num;
-    printf("Enter a number: ");
-    scanf("%f", &num);
-    return num;
+float input()
+{
+    float n;
+    printf("enter the number\n");
+    scanf("%f", &n);
+    return n;
 }
 
-float square_root(float n) {
-  
-    float x0 = n / 2.0;
- 
-    for (int i = 0; i < 10; i++) {
-        x0 = 0.5 * (x0 + n / x0);
+float square_root(float n) 
+{
+   
+
+  float x_old=1,x_new=n/2;
+  float precision=0.000001;
+  while(fabs(x_new-x_old)>precision)
+    {
+      x_old=x_new;
+      x_new=(x_old+n/x_old)/2;
     }
-    return x0;
+  return x_new;
 }
 
-void output(float n, float sqrroot) {
-    printf("The square root of %.2f is approximately %.6f\n", n, sqrroot);
+void output(float n, float sqrroot)
+{
+   printf("The squareroot of %f", n);
+   printf("  is  %f", sqrroot);
+ 
 }

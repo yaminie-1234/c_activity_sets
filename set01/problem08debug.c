@@ -13,8 +13,8 @@ Reading symbols from C:\Users\ADMIN\Desktop\PSC\c_activity_sets\set01\a.exe...do
 Breakpoint 1 at 0x40154b: file problem08.c, line 32.
 (gdb) r
 Starting program: C:\Users\ADMIN\Desktop\PSC\c_activity_sets\set01/a.exe 
-[New Thread 8240.0x13f8]
-[New Thread 8240.0x1df0]
+[New Thread 2420.0x20ac]
+[New Thread 2420.0x3d60]
 
 Breakpoint 1, 0x0040154b in main () at problem08.c:32
 32      int main(){
@@ -37,12 +37,8 @@ main () at problem08.c:35
 (gdb) s
 __chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
 163     ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S: No such file or directory.
-(gdb) s
-165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
-(gdb) s
-167     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
 (gdb) c
 Continuing.
 The sum of given numbers entered by the user :0
-[Inferior 1 (process 8240) exited normally]
+[Inferior 1 (process 2420) exited normally]
 (gdb)
