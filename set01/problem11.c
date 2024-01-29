@@ -6,6 +6,7 @@ struct _complex
 }; 
 typedef struct _complex Complex;
 
+
 Complex input_complex()
 {
 Complex num;
@@ -24,14 +25,14 @@ Complex add_complex(Complex a, Complex b)
 }
 void output(Complex a,Complex b,Complex sum)
 {
-    printf("the sum of %2.f+%2.fi and %2.f+%2.fi is %2.f ",a.real,a.imaginary,b.real,b.imaginary);
+    printf("the sum of %2.f+%2.fi and %2.f+%2.fi is %2.f ",a.real+a.imaginary,b.real+b.imaginary,sum.real+sum.imaginary);
 }
 int main()
 {
     Complex num1,num2,result;
     printf("enter the 1st complex number\n");
     num1=input_complex();
-     printf("enter the 2nd complex number\n");
+    printf("enter the 2nd complex number\n");
     num2=input_complex();
     result=add_complex(num1,num2);
     output(num1,num2,result);
