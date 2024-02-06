@@ -7,7 +7,7 @@
 int input_side(){
     int side;
     printf("Enter the side of a triangle:");
-    scanf("%d,&side");
+    scanf("%d",&side);
     return side;
 }
 int check_scalene(int a, int b, int c){
