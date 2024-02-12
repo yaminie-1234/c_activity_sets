@@ -2,7 +2,8 @@
 
 // ***Function Declarations***
 #include<stdio.h>
-void input(int *a, int *b){
+void input(int *a, int *b)
+{
     printf("Enter the number:");
     scanf("%d",a);
     printf("Enter the number:");

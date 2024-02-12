@@ -9,6 +9,7 @@ int input(){
     scanf("%d",&n);
     return n;
 }
+
 int compare(int a, int b, int c){
     if (a>=b && a>=c)
     {
