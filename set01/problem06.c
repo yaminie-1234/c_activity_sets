@@ -2,7 +2,6 @@
 
 // ***Function Declarations***
 
-// ```c
 #include<stdio.h>
 int input(int *a, int *b, int *c);
 void compare(int a, int b, int c, int *largest);
@@ -10,7 +9,7 @@ void output(int a, int b, int c, int largest);
 
 
 int input(int *a, int *b, int *c){
-    printf("ENter the number:\n");
+    printf("Enter the number:\n");
     scanf("%d",a);
     printf("Enter the number:\n");
     scanf("%d",b);
