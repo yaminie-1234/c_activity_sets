@@ -1,41 +1,39 @@
 #include<stdio.h>
-struct _complex
- {
-   float real;
-   float imaginary;
-}; 
-typedef struct _complex Complex;
 
+typedef struct _complex {
+    float real;
+    float imag;
+} Complex;
 
-Complex input_complex()
-{
-Complex num;
-printf("enter the real num:");
-scanf("%f",&num.real);
-printf("enter the imaginary num:");
-scanf("%f",&num.imaginary);
-return num;
-}
-Complex add_complex(Complex a, Complex b)
-{
-    Complex sum;
-    sum.real=a.real+b.real;
-    sum.imaginary=a.imaginary+b.imaginary;
-    return sum;
-}
-void output(Complex a,Complex b,Complex sum)
-{
-    printf("the sum of %2.f+%2.fi and %2.f+%2.fi is %2.f+%2.fi",a.real+a.imaginary,b.real+b.imaginary,sum.real+sum.imaginary);
-}
-int main()
-{
-    Complex num1,num2,result;
-    printf("enter the 1st complex number\n");
+Complex input_complex();
+Complex add_complex(Complex a, Complex b);
+void output(Complex a, Complex b, Complex sum);
+
+int main(){
+    Complex num1,num2,sum;
     num1=input_complex();
-    printf("enter the 2nd complex number\n");
     num2=input_complex();
-    result=add_complex(num1,num2);
-    output(num1,num2,result);
+    sum=add_complex(num1,num2);
+    output(num1,num2,sum);
     return 0;
 }
 
+Complex input_complex(){
+   Complex num;
+    printf("Enter real and imaginary parts of the complex number: ");
+    scanf("%f %f", &num.real, &num.imag);
+    return num;
+}
+
+Complex add_complex(Complex a, Complex b){
+    Complex sum;
+    sum.real=a.real+b.real;
+    sum.imag=a.imag+b.imag;
+    return sum;
+}
+
+void output(Complex a, Complex b, Complex sum){
+    printf("First complex number:%.2f + %.2fi\n",a.real,a.imag);
+    printf("second complex number:%.2f + %.2fi\n",b.real,b.imag);
+    printf("sum:%.2f + %.2fi\n",sum.real,sum.imag);
+}
